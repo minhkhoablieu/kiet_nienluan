@@ -12,7 +12,7 @@
     <div class="max-w-screen-lg	mx-auto">
         <section id="search">
         <div class="relative mr-6 my-2 w-full">
-            <form action="{{route('product.index')}}" method="GET">
+            <form action="{{Request::fullUrl()}}" method="GET">
 
 
             <input type="search" name="search" class="bg-purple-white shadow rounded border-0 p-3 w-full" placeholder="Tìm kiếm sản phảm" value="{{Request::get('search')}}">
@@ -31,42 +31,74 @@ S32.459,40,21.983,40z" />
             </section>
         </div>
      <section id="product" class="my-8">
-         @if(Request::get('search'))
-<p class="text-center uppercase text-xl my-4"> Tìm kiếm sản phẩm với từ khoá {{Request::get('search')}} </p>
-        @else
-        <p class="text-center uppercase text-xl my-4">Tất cả sản phẩm
 
-            @if (Request::get('category'))
-                theo danh mục
-            @endif
-        </p>
-        @endif
-        <div class="grid grid-cols-4 gap-4">
-            @foreach ($products as $product)
-            <a href="{{route('product.show', $product->slug)}}">
-                <div class="hover:shadow-lg">
-                <div class="bg-gray-100">
-                    <img src="{{$product->image}}" alt="">
-                </div>
-                <div class="m-2">
-                    <span class="p-1 bg-black text-white text-xs">
-                        NEW
-                    </span>
-                    <div class="my-1  text-sm">
-                        {{$product->name}}
+        <div class="flex">
+            <div class="w-1/4">
+                <ul>
+                    Tìm kiếm theo Danh mục
+                    @foreach($categories as $category)
+                    <li class="">
+                        <div class="bg-gray-100 mt-4 ">
+                            <div class="bg-blue-500 p-2 rounded-t-lg">
+                                <p class="text-white uppercase">{{$category->name}}</p>
+                            </div>
+                            @if($category->children->isNotEmpty())
+                            <div class="p-2">
+                                @foreach($category->children as $subcategory)
+                                <p>{{$subcategory->name}}</p>
+                                @endforeach
+
+                            </div>
+                            @endif
+                        </div>
+                    </li>
+                    @endforeach
+                </ul>
+                <ul class="mt-4 border-t-2">
+                    Tìm kiếm theo giá
+                    <li></li>
+                </ul>
+            </div>
+            <div class=" w-3/4">
+                 @if(Request::get('search'))
+                    <p class="text-center uppercase text-xl my-4"> Tìm kiếm sản phẩm với từ khoá {{Request::get('search')}} </p>
+                @else
+                    <p class="text-center uppercase text-xl my-4">Tất cả sản phẩm
+                        @if (Request::get('category'))
+                            theo danh mục
+                        @endif
+                    </p>
+                @endif
+                <div class="grid grid-cols-3 gap-4">
+                @foreach ($products as $product)
+                <a href="{{route('product.show', $product->slug)}}">
+                    <div class="hover:shadow-lg">
+                    <div class="bg-gray-100">
+                        <img src="{{$product->image}}" alt="">
+                    </div>
+                    <div class="m-2">
+                        <span class="p-1 bg-black text-white text-xs">
+                            NEW
+                        </span>
+                        <div class="my-1  text-sm">
+                            {{$product->name}}
+                        </div>
+
+                        <div class="my-1 text-sm">
+                            {{$product->price}}
+                        </div>
                     </div>
 
-                    <div class="my-1 text-sm">
-                        {{$product->price}}
-                    </div>
                 </div>
+                </a>
+                @endforeach
+
+                </div>
+
 
             </div>
-            </a>
-            @endforeach
-
-
         </div>
+
     </section>
 </div>
 </main>

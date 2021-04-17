@@ -6,7 +6,7 @@
 
             <div class="hidden sm:block sm:ml-6">
                <ul class="flex space-x-4">
-                   <li class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium">
+                   <li class="bg-blue-500 text-white px-3 py-2 rounded-md text-sm font-medium">
                         <a href="/">Trang chủ</a>
                    </li>
                    @foreach ($categories as $category)
@@ -20,7 +20,11 @@
                             </ul>
                             @endif
                         </li>
+
                    @endforeach
+                   <li class="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">
+                       <a href="/contact">Liên hệ</a>
+                   </li>
               </ul>
             </div>
           </div>
@@ -36,28 +40,5 @@
         </div>
       </div>
 
-      <div class="sm:hidden" id="mobile-menu">
-        <div class="px-2 pt-2 pb-3 space-y-1">
-          <a
-            href="#"
-            class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium"
-            >Trang chủ</a
-          >
-          <a
-            href="#"
-            class="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            >Nam</a
-          >
-          <a
-            href="#"
-            class="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            >Nữ</a
-          >
-          <a
-            href="#"
-            class="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-            >Dây đồng hồ</a
-          >
-        </div>
-      </div>
+
     </nav>

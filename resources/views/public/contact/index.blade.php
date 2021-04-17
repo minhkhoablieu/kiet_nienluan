@@ -1,111 +1,62 @@
 @extends('public.layout.app')
 @section('css')
 
-    <link rel="stylesheet" type="text/css" href="{{asset('plugins/jquery-ui-1.12.1.custom/jquery-ui.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('styles/contact_styles.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('styles/header_styles.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('styles/footer_styles.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('styles/responsive.css')}}">
+
 
 @endsection
 @section('content')
-
-<!-- Contact Info -->
-
-<div class="contact_info">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1">
-                <div class="contact_info_container d-flex flex-lg-row flex-column justify-content-between align-items-between">
-
-                    <!-- Contact Item -->
-                    <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                        <div class="contact_info_image"><img src="{{asset('images/contact_1.png')}}" alt=""></div>
-                        <div class="contact_info_content">
-                            <div class="contact_info_title">Phone</div>
-                            <div class="contact_info_text">02923 3834 267</div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Item -->
-                    <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                        <div class="contact_info_image"><img src="{{asset('images/contact_2.png')}}" alt=""></div>
-                        <div class="contact_info_content">
-                            <div class="contact_info_title">Email</div>
-                            <div href="mailto:mis@ctu.edu.vn" class="contact_info_text">mis@ctu.edu.vn</div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Item -->
-                    <div class="contact_info_item d-flex flex-row align-items-center justify-content-start">
-                        <div class="contact_info_image"><img src="{{asset('images/contact_3.png')}}" alt=""></div>
-                        <div class="contact_info_content">
-                            <div class="contact_info_title">Address</div>
-                            <div class="contact_info_text">Trường ĐHCT Khu 2 đường 3/2 Xuân Khánh, Ninh Kiều, Cần Thơ, Việt Nam</div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+<main>
+<section class="text-gray-600 body-font relative">
+  <div class="max-w-screen-lg px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+    <div class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+      <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+      <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+        <div class="lg:w-1/2 px-6">
+          <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
+          <p class="mt-1">Photo booth tattooed prism, portland taiyaki hoodie neutra typewriter</p>
         </div>
-    </div>
-</div>
-
-<!-- Contact Form -->
-
-<div class="contact_form">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10 offset-lg-1">
-                <div class="contact_form_container">
-                    <div class="contact_form_title">Liên hệ chúng tôi</div>
-
-
-                        <div class="contact_form_inputs d-flex flex-md-row flex-column justify-content-between align-items-between">
-                            <input type="text" id="contact_form_name" name="name" class="contact_form_name input_field" placeholder="Tên của bạn" required="required" data-error="Name is required.">
-                            <input type="text" id="contact_form_email" name="email" class="contact_form_email input_field" placeholder="Mail" required="required" data-error="Email is required.">
-                            <input type="text" id="contact_form_phone" name="phone" class="contact_form_phone input_field" placeholder="Số điện thoại">
-                        </div>
-                        <div class="contact_form_text">
-                            <textarea id="contact_form_message" name="content" class="text_field contact_form_message"  rows="4" placeholder="Nội dung..." required="required" data-error="Vui lòng soạn nội dung."></textarea>
-                        </div>
-                        <div class="contact_form_button">
-                            <button type="submit" id="contact_submit" class="button contact_submit_button">Gửi</button>
-                        </div>
-
-
-                </div>
-            </div>
+        <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+          <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
+          <a class="text-indigo-500 leading-relaxed">example@email.com</a>
+          <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
+          <p class="leading-relaxed">123-456-7890</p>
         </div>
+      </div>
     </div>
-    <div class="panel"><a> We are here! </a></div>
-</div>
-
-<!-- Map -->
-
-<div class="contact_map">
-    <div id="google_map" class="google_map">
-        <div class="map_container">
-            <div id="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3692.0376867436744!2d105.76681311461577!3d10.030883692830004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31a0883d2192b0f1%3A0x4c90a391d232ccce!2zS2hvYSBDw7RuZyBOZ2jhu4cgVGjDtG5nIFRpbiB2w6AgVHJ1eeG7gW4gVGjDtG5nIChDVFUp!5e1!3m2!1svi!2s!4v1596389140287!5m2!1svi!2s" width="1688" height="430" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </div>
-        </div>
+    <div class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+      <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Liên hệ</h2>
+      <p class="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p>
+      <div class="relative mb-4">
+        <label for="name" class="leading-7 text-sm text-gray-600">Họ và tên</label>
+        <input required type="text" id="contact_form_name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+      <div class="relative mb-4">
+        <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+        <input required type="email" id="contact_form_email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+      <div class="relative mb-4">
+        <label for="email" class="leading-7 text-sm text-gray-600">Số điện thoại</label>
+        <input required type="text" id="contact_form_phone" name="phone" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+      </div>
+      <div class="relative mb-4">
+        <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+        <textarea id="contact_form_message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
+      </div>
+      <button  type="submit" id="contact_submit" class="text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
+      <p class="text-xs text-gray-500 mt-3">Chicharrones blog helvetica normcore iceland tousled brook viral artisan.</p>
     </div>
-</div>
-
-
+  </div>
+</section>
+</main>
 @endsection
-@section('js')
-    <script src="{{asset('plugins/Isotope/isotope.pkgd.min.js')}}"></script>
-    <script src="{{asset('plugins/jquery-ui-1.12.1.custom/jquery-ui.js')}}"></script>
-    <script src="{{asset('plugins/parallax-js-master/parallax.min.js')}}"></script>
-    <script src="{{asset('js/contact_custom.js')}}"></script>
+@push('js')
+
     <script>
         $('#contact_submit').click(function () {
             let name = $('#contact_form_name').val();
             let phone = $('#contact_form_phone').val();
             let email = $('#contact_form_email').val();
             let content = $('#contact_form_message').val();
-
             $.post('/contact',{
                 name: name,
                 phone: phone,
@@ -121,8 +72,6 @@
                 $("input").val("");
                 $('#contact_form_message').val('');
             })
-
         })
-
     </script>
-@endsection
+@endpush
