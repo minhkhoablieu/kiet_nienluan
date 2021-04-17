@@ -4,7 +4,7 @@
                 <div>
                     <p>Địa chỉ: </p>
                     <p>Số điện thoại: </p>
-                    <a href="mailto:minhkhoablieu@gmail.com"> minhkhoablieu@gmail.com</a>
+                    <a href="mailto:kiet051000@gmail.com"> kiet051000@gmail.com</a>
                 </div>
                 <div>
                     <p>ĐỒNG HỒ</p>
