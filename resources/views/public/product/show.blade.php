@@ -30,7 +30,7 @@
                             <ul class="font-sans py-4">
                                 <li>FREESHIP</li>
                                 <li>Miễn phí hoàn trả</li>
-                                <li></li>
+                                <li>Bảo hành 2 năm </li>
                             </ul>
                         </div>
                     </div>
