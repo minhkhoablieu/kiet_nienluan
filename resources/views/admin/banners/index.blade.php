@@ -19,11 +19,11 @@
                 <table id="table" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                 <tr>
-                    <th>Images</th>
+                    <th>Hình ảnh</th>
                     <th>URL</th>
-                    <th>Sort</th>
-                    <th>Status</th>
-                    <th>Action</th>
+                    <th>Sắp xếp</th>
+                    <th>Trạng thái</th>
+                    <th>hoạt động</th>
                 </tr>
                 </thead>
                 <tbody>
