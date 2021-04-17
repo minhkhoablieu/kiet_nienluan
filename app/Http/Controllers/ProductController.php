@@ -12,7 +12,6 @@ class ProductController extends Controller
     //
     public function index(Request $request)
     {
-
         $products = Product::where('active', true)
             ->where('name', 'ilike', "%{$request->get('search')}%")
             ->Category($request)

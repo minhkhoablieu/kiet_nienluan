@@ -28,5 +28,6 @@ class ComposerServiceProvider extends ServiceProvider
         view()->composer(['public.shared.footer', 'public.shared.header', 'public.product.index', 'public.home.deals_featured'], 'App\Http\ViewComposers\BrandComposer');
         view()->composer(['public.shared.footer', 'public.shared.header', 'public.product.index'], 'App\Http\ViewComposers\SponsorComposer');
         view()->composer(['public.shared.header'], 'App\Http\ViewComposers\CartComposer');
+        view()->composer(['public.shared.banner'], 'App\Http\ViewComposers\BannerComposer');
     }
 }
