@@ -4,7 +4,11 @@
         @foreach ($banners as  $banner)
             <img  class="swiper-slide" src="{{$banner->image}}" class="w-full" alt="">
         @endforeach
-    </div></div>
+    </div>
+     <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
     <div class="flex bg-gray-100 p-4">
         <div class="flex-1 text-center text-sm uppercase">Freeship</div>
         <div class="flex-1 text-center text-sm uppercase">Hoàn trả miễn phí</div>
@@ -14,6 +18,17 @@
 @push('js')
 <script>
  var swiper = new Swiper('.swiper-container', {
+      spaceBetween: 30,
+      loop: true,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+     pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar',
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
