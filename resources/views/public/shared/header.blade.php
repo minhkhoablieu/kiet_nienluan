@@ -10,7 +10,7 @@
                         <a href="/">Trang chủ</a>
                    </li>
                    @foreach ($categories as $category)
-                      <li class="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium  @if($category->children->isNotEmpty())  relative dropdown @endif">
+                      <li class="text-gray-800 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium z-10	 @if($category->children->isNotEmpty())  relative dropdown @endif">
                             <a href="{{route('product.index', ['category' => $category->slug])}}">{{$category->name}}</a>
                             @if($category->children->isNotEmpty())
                             <ul class="dropdown-menu absolute left-0 top-9 bg-gray-100 w-max rounded-md hidden text-gray-800">
