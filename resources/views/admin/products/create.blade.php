@@ -17,7 +17,7 @@
         @csrf
         <div class="card-body">
             <div class="form-group">
-                <label for="select2">Category</label>
+                <label for="select2">Danh mục</label>
                 <div class="select2-purple">
                     <select class="select2" id="select2" required name="categories[]" multiple="multiple" data-placeholder="Choose category" data-dropdown-css-class="select2-purple" style="width: 100%;">
 
