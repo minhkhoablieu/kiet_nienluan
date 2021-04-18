@@ -1,5 +1,5 @@
  <section id="banner">
-      <div class="swiper-container-banner">
+      <div class="swiper-container">
     <div class="swiper-wrapper">
         @foreach ($banners as  $banner)
             <img  class="swiper-slide" src="{{$banner->image}}" class="w-full" alt="">
@@ -17,7 +17,7 @@
 </section>
 @push('js')
 <script>
- var swiper = new Swiper('.swiper-container-banner', {
+ var swiper = new Swiper('.swiper-container', {
       spaceBetween: 30,
       loop: true,
       centeredSlides: true,
