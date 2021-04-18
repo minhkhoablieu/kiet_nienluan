@@ -8,9 +8,9 @@
         <section>
                <div class="flex">
                     <div class="w-1/2 p-8">
-                        <div class="">
-                            <div class="">
-                                <img class="" src="{{$product->image}}"
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <img class="swiper-slide" src="{{$product->image}}"
                                     alt="">
 
                             </div>
