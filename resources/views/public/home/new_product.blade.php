@@ -9,7 +9,7 @@
                     <img src="{{$product->image}}" alt="">
                 </div>
                 <div class="m-2">
-                    <span class="p-1 bg-black text-white text-xs">
+                    <span class="p-1 bg-blue-500 text-white text-xs">
                         NEW
                     </span>
                     <div class="my-1  text-sm">

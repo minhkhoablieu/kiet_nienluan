@@ -19,10 +19,16 @@
                     </div>
                     <div class="w-1/2">
                         <span class="p-1 bg-blue-500 text-white text-xs">NEW</span>
-                        <p class="my-4">
-                            {{$product->name}}
-                        </p>
-                        <div class="border-b-2 my-4"></div>
+                        <div class="flex justify-between">
+                            <p class="my-2">
+                                {{$product->name}}
+                            </p>
+                            <p class="my-2">
+                                {{$product->price_convert}}
+                            </p>
+                        </div>
+
+                        <div class="border-b-2 my-2"></div>
                         <div class="flex">
                             <div>
                                 <p>
