@@ -50,14 +50,14 @@
                 <input name="user_id" type="hidden" value="{{Auth::id()}}">
                 <div class="form-group">
                     <label for="name">tên sản phẩm</label>
-                    <input required=”required” type="text" name="name" class="form-control" id="name" placeholder="" value="{{$product->name}}">
+                    <input required type="text" name="name" class="form-control" id="name" placeholder="" value="{{$product->name}}">
                 </div>
 
                 <div class="form-group col-12">
                     <label for="exampleInputFile">Chọn hình ảnh</label>
                     <div class="input-group">
                         <div class="custom-file">
-                            <input required=”required” id="image" class="form-control" type="text" name="image" value="{{$product->image}}">
+                            <input required id="image" class="form-control" type="text" name="image" value="{{$product->image}}">
                             <span class="input-group-btn">
                                 <a id="lfm" data-input="image" data-preview="holder" class="input-group-text">
                                     <i class="fa fa-picture-o"></i> Chọn hình ảnh
@@ -71,7 +71,7 @@
                     <label for="exampleInputFile">Choose thumbnail</label>
                     <div class="input-group">
                         <div class="custom-file">
-                            <input required=”required” id="thumbnail" class="form-control" type="text" name="thumbnail" value="{{$product->thumbnail}}">
+                            <input required id="thumbnail" class="form-control" type="text" name="thumbnail" value="{{$product->thumbnail}}">
                             <span class="input-group-btn">
                                 <a id="thumbnail_input" data-input="thumbnail" data-preview="holder" class="input-group-text">
                                     <i class="fa fa-picture-o"></i> Chọn hình ảnh
@@ -82,11 +82,15 @@
                 </div>
                 <div class="form-group">
                     <label for="price">Giá</label>
-                    <input required=”required” type="text" name="price" class="form-control" id="price" placeholder="100000" value="{{$product->price}}">
+                    <input required type="text" name="price" class="form-control" id="price" placeholder="100000" value="{{$product->price}}">
+                </div>
+                <div class="form-group">
+                    <label for="price">Size</label>
+                    <input type="text" name="size" class="form-control"  value="{{$product->size}}">
                 </div>
                 <div class="form-group">
                     <label for="amount">Số lượng còn lại</label>
-                    <input required=”required” type="number" name="amount" class="form-control" id="amount" placeholder="1" min="0" value="{{$product->amount}}" required>
+                    <input required type="number" name="amount" class="form-control" id="amount" placeholder="1" min="0" value="{{$product->amount}}" required>
                 </div>
 
                 <div class="form-group">

@@ -18,12 +18,31 @@
 
                     </div>
                     <div class="w-1/2">
-                        <span class="p-1 bg-black text-white text-xs">NEW</span>
+                        <span class="p-1 bg-blue-500 text-white text-xs">NEW</span>
                         <p class="my-4">
                             {{$product->name}}
                         </p>
                         <div class="border-b-2 my-4"></div>
-                        <div class="bg-gray-800	p-5 text-center text-white"  id="cart_button_2">
+                        <div class="flex">
+                            <div>
+                                <p>
+                                    Size
+                                </p>
+                                <div class="flex">
+                                    @foreach (explode(',',$product->size) as $size)
+                                        @if ($loop->first)
+                                            <div class="bg-blue-500 p-3 text-white border-none">{{$size}}mm</div>
+                                        @else
+                                            <div class="bg-white p-3 text-black border-2 border-blue-500 hover:bg-blue-500 hover:text-white">{{$size}}mm</div>
+                                        @endif
+                                    @endforeach
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="bg-blue-500	p-5 text-center text-white mt-4"  id="cart_button_2">
                             <p>THÊM VÀO GIỎ HÀNG</p>
                         </div>
                         <div>

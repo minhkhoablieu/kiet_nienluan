@@ -9,7 +9,7 @@
 @section('content')
 <div class="card card-warning">
     <div class="card-header">
-{{--        <h3 class="card-title"><?= $title ?></h3>--}}
+{{--        <h3 class="card-title">{{ $title }}</h3>--}}
     </div>
     <!-- /.card-header -->
     <!-- form start -->
@@ -47,19 +47,19 @@
             <input name="user_id" type="hidden" value="{{Auth::id()}}">
             <div class="form-group">
                 <label for="name">Product Name</label>
-                <input required=”required” type="text" name="name" class="form-control" id="name" placeholder="" value="<?= old('name') ?>">
+                <input required type="text" name="name" class="form-control" id="name" placeholder="" value="{{ old('name') }}">
             </div>
 
             <div class="form-group col-12">
                 <label for="exampleInputFile">Choose images</label>
                 <div class="input-group">
                     <div class="custom-file">
-                        <input required=”required” id="image" class="form-control" type="text" name="image" value="{{old('image')}}">
+                        <input required id="image" class="form-control" type="text" name="image" value="{{old('image')}}">
                         <span class="input-group-btn">
                                 <a id="lfm" data-input="image" data-preview="holder" class="input-group-text">
                                     <i class="fa fa-picture-o"></i> Choose images
                                 </a>
-                             </span>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -68,7 +68,7 @@
                 <label for="exampleInputFile">Choose thumbnail</label>
                 <div class="input-group">
                     <div class="custom-file">
-                        <input required=”required” id="thumbnail" class="form-control" type="text" name="thumbnail" value="{{old('thumbnail')}}">
+                        <input required id="thumbnail" class="form-control" type="text" name="thumbnail" value="{{old('thumbnail')}}">
                         <span class="input-group-btn">
                                 <a id="thumbnail_input" data-input="thumbnail" data-preview="holder" class="input-group-text">
                                     <i class="fa fa-picture-o"></i> Choose images
@@ -79,11 +79,15 @@
             </div>
             <div class="form-group">
                 <label for="price">Price</label>
-                <input min=0 required type="number" name="price" class="form-control" id="price" placeholder="100000" value="<?= old('price') ?>">
+                <input min=0 required type="number" name="price" class="form-control" id="price" placeholder="100000" value="{{ old('price') }}">
+            </div>
+            <div class="form-group">
+                <label for="price">Size</label>
+                <input type="text" name="size" class="form-control"  value="{{ old('size') }}">
             </div>
             <div class="form-group">
                 <label for="amount">The remaining amount</label>
-                <input min=0 required type="number" name="amount" class="form-control" id="amount" placeholder="1" value="<?= old('amount') ?>" required>
+                <input min=0 required type="number" name="amount" class="form-control" id="amount" placeholder="1" value="{{ old('amount') }}" required>
             </div>
             <div class="form-group">
                 <label for="content">Description</label>

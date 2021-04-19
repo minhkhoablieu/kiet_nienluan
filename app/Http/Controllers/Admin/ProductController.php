@@ -62,10 +62,9 @@ class ProductController extends Controller
 
         $product->user_id = $request->post('user_id');
         $product->brand_id = $request->post('brand');
-        // $product->size =
         $product->active = $request->post('active');
         $product->is_new = $request->post('is_new');
-
+        $product->size = $request->post('size');
         $product->save();
 
         $product->categories()->attach($request->post('categories'));
@@ -107,6 +106,7 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
+        $product->size = $request->post('size');
 
         $product->name = $request->post('name');
         $product->slug = $request->post('slug');
