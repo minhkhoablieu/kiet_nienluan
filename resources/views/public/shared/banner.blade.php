@@ -10,9 +10,9 @@
     <div class="swiper-button-prev"></div>
 </div>
     <div class="flex bg-gray-100 p-4">
-        <div class="flex-1 text-center text-sm uppercase">Freeship</div>
-        <div class="flex-1 text-center text-sm uppercase">Hoàn trả miễn phí</div>
-        <div class="flex-1 text-center text-sm uppercase"><i class="fas fa-watch"></i>Bảo hành 2 năm</div>
+        <div class="flex-1 text-center text-sm uppercase"><i class="fas fa-truck"></i> Freeship</div>
+        <div class="flex-1 text-center text-sm uppercase"><i class="fas fa-exchange-alt"></i> Hoàn trả miễn phí</div>
+        <div class="flex-1 text-center text-sm uppercase"><i class="fas fa-watch"></i><i class="fas fa-clock"></i> Bảo hành 2 năm</div>
     </div>
 </section>
 @push('js')

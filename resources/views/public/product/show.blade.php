@@ -47,9 +47,9 @@
                         </div>
                         <div>
                             <ul class="font-sans py-4">
-                                <li>FREESHIP</li>
-                                <li>Miễn phí hoàn trả</li>
-                                <li>Bảo hành 2 năm </li>
+                                <li><i class="fas fa-caret-right"></i> FREESHIP</li>
+                                <li><i class="fas fa-caret-right"></i> Miễn phí hoàn trả</li>
+                                <li><i class="fas fa-caret-right"></i> Bảo hành 2 năm </li>
                             </ul>
                         </div>
                     </div>
