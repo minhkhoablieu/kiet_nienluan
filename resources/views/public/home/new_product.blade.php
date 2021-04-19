@@ -17,7 +17,7 @@
                     </div>
 
                     <div class="my-1 text-sm">
-                        {{$product->price}}
+                        {{$product->price_convert}}
                     </div>
                 </div>
 

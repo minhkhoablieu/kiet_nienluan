@@ -77,7 +77,7 @@
                                                 <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="{{asset($product->thumbnail)}}" alt="thumbnail"></div>
                                                 <div class="product_content">
                                                     <div class="product_name content-custom"><div><a href="{{route('product.show', $product->slug)}}" tabindex="0">{{$product->name}}</a></div></div>
-                                                    <div class="product_price discount">{{$product->price}}</div><p style="	color: #df3b3b;	display: inline;font-weight: bold;"> VND</p>
+                                                    <div class="product_price discount">{{$product->price_convert}}</div><p style="	color: #df3b3b;	display: inline;font-weight: bold;"> VND</p>
                                                     <div class="product_extras">
                                                         <button class="product_cart_button" onclick="addcart({{$product->id}})" data-id="{{$product->id}}">Thêm vào giỏ</button>
                                                     </div>

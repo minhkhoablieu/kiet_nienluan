@@ -85,7 +85,7 @@ S32.459,40,21.983,40z" />
                         </div>
 
                         <div class="my-1 text-sm">
-                            {{$product->price}}
+                            {{$product->price_convert}}
                         </div>
                     </div>
 

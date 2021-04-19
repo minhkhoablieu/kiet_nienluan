@@ -64,6 +64,10 @@ class Product extends Model
             return 'slug';
         }
     }
+    public function getPriceConvertAttribute()
+    {
+        return number_format($this->price, 0, '', ',');
+    }
     public function getCategoryNameAttribute()
     {
         return $this->categories;
