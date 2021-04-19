@@ -65,6 +65,8 @@ class ProductController extends Controller
         $product->active = $request->post('active');
         $product->is_new = $request->post('is_new');
         $product->size = $request->post('size');
+        $product->sale = $request->post('sale');
+
         $product->save();
 
         $product->categories()->attach($request->post('categories'));
@@ -125,6 +127,7 @@ class ProductController extends Controller
 
         $product->active = $request->post('active');
         $product->is_new = $request->post('is_new');
+        $product->sale = $request->post('sale');
 
         $product->categories()->sync($request->post('categories'));
 

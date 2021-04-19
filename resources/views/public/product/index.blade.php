@@ -84,8 +84,10 @@ S32.459,40,21.983,40z" />
                             {{$product->name}}
                         </div>
 
-                        <div class="my-1 text-sm">
-                            {{$product->price_convert}}
+                        <div class="flex justify-between">
+                            <div>{{$product->sale_convert}}</div>
+                            <div class="line-through">{{$product->price_convert}}</div>
+
                         </div>
                     </div>
 

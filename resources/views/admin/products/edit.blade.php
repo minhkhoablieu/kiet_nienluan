@@ -85,6 +85,10 @@
                     <input required type="text" name="price" class="form-control" id="price" placeholder="100000" value="{{$product->price}}">
                 </div>
                 <div class="form-group">
+                    <label for="sale">Sale</label>
+                    <input required type="text" name="sale" class="form-control" id="sale" placeholder="100000" value="{{$product->sale}}">
+                </div>
+                <div class="form-group">
                     <label for="price">Size</label>
                     <input type="text" name="size" class="form-control"  value="{{$product->size}}">
                 </div>

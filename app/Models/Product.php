@@ -30,7 +30,8 @@ class Product extends Model
         'user_id',
         'content',
         'active',
-        'brand_id'
+        'brand_id',
+        'sale'
     ];
     protected $casts = [
         'price' => 'integer'
@@ -67,6 +68,10 @@ class Product extends Model
     public function getPriceConvertAttribute()
     {
         return number_format($this->price, 0, '', ',');
+    }
+    public function getSaleConvertAttribute()
+    {
+        return number_format($this->sale, 0, '', ',');
     }
     public function getCategoryNameAttribute()
     {

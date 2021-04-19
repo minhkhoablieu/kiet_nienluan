@@ -82,6 +82,10 @@
                 <input min=0 required type="number" name="price" class="form-control" id="price" placeholder="100000" value="{{ old('price') }}">
             </div>
             <div class="form-group">
+                <label for="sale">Sale</label>
+                <input min=0 required type="number" name="sale" class="form-control" id="sale" placeholder="100000" value="{{ old('sale') }}">
+            </div>
+            <div class="form-group">
                 <label for="price">Size</label>
                 <input type="text" name="size" class="form-control"  value="{{ old('size') }}">
             </div>
