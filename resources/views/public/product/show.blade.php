@@ -31,9 +31,9 @@
                                 <div class="flex">
                                     @foreach (explode(',',$product->size) as $size)
                                         @if ($loop->first)
-                                            <div class="bg-blue-500 p-3 text-white border-none">{{$size}}mm</div>
+                                            <div class="bg-blue-500 p-3 text-white border-none">{{$size}}</div>
                                         @else
-                                            <div class="bg-white p-3 text-black border-2 border-blue-500 hover:bg-blue-500 hover:text-white">{{$size}}mm</div>
+                                            <div class="bg-white p-3 text-black border-2 border-blue-500 hover:bg-blue-500 hover:text-white">{{$size}}</div>
                                         @endif
                                     @endforeach
 
