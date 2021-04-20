@@ -1,4 +1,4 @@
-<footer class="my-4 border-t-2 bg-white">
+<footer class="my-4 border-t-2 bg-gray-100">
         <div class="max-w-screen-lg mx-auto py-4">
             <div class="flex justify-between">
                 <div>
