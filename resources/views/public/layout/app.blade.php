@@ -27,7 +27,7 @@
 
 
 
-      @yield('css')
+      @stack('css')
 
   </head>
   <body>

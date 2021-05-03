@@ -26,6 +26,7 @@ class ProductController extends Controller
             ->whereBetween('price', [$minPrice, $maxPrice])
             ->Category($request)
             ->paginate(9)->appends(request()->query());
+
         $productCount =  Product::where('active', true)->count();
         return view('public.product.index', [
             'products' => $products,

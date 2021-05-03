@@ -34,16 +34,12 @@
                                 <p>
                                     Size
                                 </p>
-                                <div class="flex">
+                                <ul class="flex">
                                     @foreach (explode(',',$product->size) as $size)
-                                        @if ($loop->first)
-                                            <div class="bg-blue-500 p-3 text-white border-none">{{$size}}</div>
-                                        @else
-                                            <div class="bg-white p-3 text-black border-2 border-blue-500 hover:bg-blue-500 hover:text-white">{{$size}}</div>
-                                        @endif
+                                        <li class="bg-white p-3 text-black border-2 border-blue-500 hover:bg-blue-500 hover:text-white">{{$size}}</li>
                                     @endforeach
 
-                                </div>
+                                </ul>
                             </div>
 
 
@@ -80,6 +76,14 @@
 
     @include('public.home.new_product')
 @endsection
+@push('css')
+    <style>
+        .active{
+            background:#3B82F6;
+            color:white;
+        }
+    </style>
+@endpush
 @push('js')
     {{-- <script src="{{asset('js/product_custom.js')}}"></script>
     <script src="{{asset('js/custom.js')}}"></script>
@@ -115,6 +119,9 @@
         });
 
 
-
+    $('ul li').click(function(){
+        $('li').removeClass("active");
+        $(this).addClass("active");
+    });
     </script>
 @endpush
