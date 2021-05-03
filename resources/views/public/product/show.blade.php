@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     @include('public.shared.banner')
-    <div class="max-w-screen-lg mx-auto mt-5">
+    <div class="max-w-screen-xl mx-auto mt-5">
         <section>
                <div class="flex">
                     <div class="w-1/2 p-8">

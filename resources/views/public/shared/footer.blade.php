@@ -1,5 +1,5 @@
 <footer class="my-4 border-t-2 bg-gray-100">
-        <div class="max-w-screen-lg mx-auto py-4">
+        <div class="max-w-screen-xl mx-auto py-4">
             <div class="flex justify-between">
                 <div>
                     <p><i class="fas fa-map-marker-alt"></i> Nguyễn Việt Hồng - Ninh Kiều - Cần Thơ </p>

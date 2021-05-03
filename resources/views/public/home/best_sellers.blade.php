@@ -1,4 +1,4 @@
-<div class="max-w-screen-lg	mx-auto">
+<div class="max-w-screen-xl	mx-auto">
      <section id="product" class="my-8">
         <p class="text-center uppercase text-xl my-4">Sản phẩm bán chạy</p>
         <div class="grid grid-cols-4 gap-4">

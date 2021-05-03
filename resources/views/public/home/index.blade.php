@@ -5,7 +5,7 @@
 @section('content')
 
     @include('public.shared.banner')
-    <div class="max-w-screen-lg	mx-auto">
+    <div class="max-w-screen-xl	mx-auto">
         <section id="search">
         <div class="relative mr-6 my-2 w-full">
             <form action="{{route('product.index')}}" method="GET">

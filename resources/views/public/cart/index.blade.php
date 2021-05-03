@@ -5,7 +5,7 @@
 @section('content')
 <!-- Cart -->
 @include('public.shared.banner')
-<div class="max-w-screen-lg mx-auto mt-5">
+<div class="max-w-screen-xl mx-auto mt-5">
     <div class="bg-gray-100 shadow-lg rounded-lg">
         <div class="flex">
              <div class="w-full p-4 px-5 py-5">
