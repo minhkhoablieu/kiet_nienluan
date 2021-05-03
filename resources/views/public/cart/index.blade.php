@@ -26,7 +26,7 @@
                 </div>
                 @endforeach
                  <div class="flex justify-between items-center mt-6 pt-6 border-t">
-                        <div class="flex items-center"><a href="/san-pham"> <i class="fa fa-arrow-left text-sm pr-2"></i> <span class="text-md font-medium text-blue-500">Tiếp tục mua sắm</span> </a></div>
+                        <div class="flex items-center"><a href="/products"> <i class="fa fa-arrow-left text-sm pr-2"></i> <span class="text-md font-medium text-blue-500">Tiếp tục mua sắm</span> </a></div>
                         <div class="flex justify-center items-end"> <span class="text-sm font-medium text-gray-400 mr-1">Tổng cộng:</span> <span class="text-lg font-bold text-gray-800 "> {{Cart::getSubTotal()}}</span> </div>
                     </div>
              </div>

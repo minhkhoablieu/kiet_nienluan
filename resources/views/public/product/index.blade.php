@@ -45,7 +45,7 @@ S32.459,40,21.983,40z" />
                             @if($category->children->isNotEmpty())
                             <div class="p-2">
                                 @foreach($category->children as $subcategory)
-                                <p>{{$subcategory->name}}</p>
+                                <a  href="{{route('product.index', ['category' => $subcategory->slug])}}" class="block" ><p>{{$subcategory->name}}</p></a>
                                 @endforeach
 
                             </div>
@@ -56,7 +56,29 @@ S32.459,40,21.983,40z" />
                 </ul>
                 <ul class="mt-4 border-t-2">
                     Tìm kiếm theo giá
-                    <li></li>
+                    <li>
+                        <a  href="{{route('product.index', ['price' => "0-500000"])}}">0 - 500.000đ</a>
+                    </li>
+                    <li>
+                         <a href="{{route('product.index', ['price' => "500000-1000000"])}}">
+                             500.000đ - 1.000.000đ
+                         </a>
+                    </li>
+                    <li>
+                         <a href="{{route('product.index', ['price' => "1000000-2000000"])}}">
+                             1.000.000đ - 2.000.000đ
+                         </a>
+                    </li>
+                    <li>
+                         <a href="{{route('product.index', ['price' => "2000000-4000000"])}}">
+                             2.000.000đ - 4.000.000đ
+                         </a>
+                    </li>
+                    <li>
+                         <a href="{{route('product.index', ['price' => "4000000-6000000"])}}">
+                             4.000.000đ - 6.000.000đ
+                         </a>
+                    </li>
                 </ul>
             </div>
             <div class=" w-3/4">
@@ -70,31 +92,34 @@ S32.459,40,21.983,40z" />
                     </p>
                 @endif
                 <div class="grid grid-cols-3 gap-4">
-                @foreach ($products as $product)
-                <a href="{{route('product.show', $product->slug)}}">
-                    <div class="hover:shadow-lg">
-                    <div class="bg-gray-100">
-                        <img src="{{$product->image}}" alt="">
-                    </div>
-                    <div class="m-2">
-                        <span class="p-1 bg-blue-500 text-white text-xs">
-                            NEW
-                        </span>
-                        <div class="my-1 text-sm">
-                            {{$product->name}}
-                        </div>
+                    @foreach ($products as $product)
+                    <a href="{{route('product.show', $product->slug)}}">
+                        <div class="hover:shadow-lg">
+                            <div class="bg-gray-100">
+                                <img src="{{$product->image}}" alt="">
+                            </div>
+                            <div class="m-2">
+                                <span class="p-1 bg-blue-500 text-white text-xs">
+                                    NEW
+                                </span>
+                                <div class="my-1 text-sm">
+                                    {{$product->name}}
+                                </div>
 
-                        <div class="flex justify-between">
-                            <div>{{$product->sale_convert}}</div>
-                            <div class="line-through">{{$product->price_convert}}</div>
+                                <div class="flex justify-between">
+                                    <div>{{$product->sale_convert}}</div>
+                                    <div class="line-through">{{$product->price_convert}}</div>
+
+                                </div>
+                            </div>
 
                         </div>
-                    </div>
+                    </a>
+                    @endforeach
 
                 </div>
-                </a>
-                @endforeach
-
+                <div class="mt-4">
+                    {{ $products->links() }}
                 </div>
 
 
