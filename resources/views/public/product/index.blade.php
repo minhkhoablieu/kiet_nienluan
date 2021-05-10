@@ -30,10 +30,10 @@ S32.459,40,21.983,40z" />
         </div>
             </section>
         </div>
-     <section id="product" class="my-8">
+     <section id="product" class="my-8 p-4">
 
-        <div class="flex">
-            <div class="w-1/4">
+        <div class="flex flex-col md:flex-row">
+            <div class="w-full lg:w-1/4">
                 <ul>
                     Tìm kiếm theo Danh mục
                     @foreach($categories as $category)
@@ -81,7 +81,7 @@ S32.459,40,21.983,40z" />
                     </li>
                 </ul>
             </div>
-            <div class=" w-3/4">
+            <div class=" w-full lg:w-3/4">
                  @if(Request::get('search'))
                     <p class="text-center uppercase text-xl my-4"> Tìm kiếm sản phẩm với từ khoá {{Request::get('search')}} </p>
                 @else
