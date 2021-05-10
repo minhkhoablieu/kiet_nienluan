@@ -5,9 +5,9 @@
 @section('content')
     @include('public.shared.banner')
     <div class="max-w-screen-xl mx-auto mt-5">
-        <section>
-               <div class="flex">
-                    <div class="w-1/2 p-8">
+        <section class="p-4">
+               <div class="flex flex-col md:flex-row">
+                    <div class="w-full">
                         <div class="">
                             <div class="">
                                 <img class="" src="{{$product->image}}"
@@ -17,7 +17,7 @@
                         </div>
 
                     </div>
-                    <div class="w-1/2">
+                    <div class="w-full">
                         <span class="p-1 bg-blue-500 text-white text-xs">NEW</span>
                         <div class="flex justify-between">
                             <p class="my-2">
@@ -57,20 +57,23 @@
                     </div>
                </div>
            </section>
-           <section>
+           <section class="p-4">
                <p>Thông tin chi tiết</p>
                <div  class="border-b-2 my-2"></div>
-               <div class="flex flex-wrap">
-                    <div class="w-1/2">
+               <div class="flex flex-col md:flex-row">
+                    <div class="w-full">
                         {!! $product->content !!}
                     </div>
-                    <div class="w-1/2">
+                    <div class="w-full">
                          {!! $product->specifications !!}
                     </div>
                </div>
 
 
            </section>
+            <section class="p-4">
+                <div class="fb-comments" data-href="http://thptbaclieucfs.com/" data-width="100%" data-numposts="5"></div>
+        </section>
         <div  class="border-b-2 my-2"></div>
     </div>
 

@@ -32,7 +32,7 @@
              </div>
         </div>
     </div>
-    <div class="flex justify-end mt-8">
+    <div class="flex justify-center	lg:justify-end mt-8">
         <div class="bg-gray-100 shadow-lg rounded-lg">
             <div class="w-full p-4 px-5 py-5">
                 <p class="font-bold uppercase">Thông tin khách hàng</p>

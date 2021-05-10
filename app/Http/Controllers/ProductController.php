@@ -19,13 +19,21 @@ class ProductController extends Controller
             $minPrice = $price[0];
             $maxPrice = $price[1];
         }
+        if (is_numeric($request->get('search'))) {
+            $products = Product::where('active', true)
+                // ->where('name', 'ilike', "%{$request->get('search')}%")
+                ->whereBetween('sale',  [$request->get('search') - 100000, $request->get('search') + 100000])
+                ->whereBetween('sale', [$minPrice, $maxPrice])
+                ->Category($request)
+                ->paginate(9)->appends(request()->query());
+        } else {
+            $products = Product::where('active', true)
+                ->where('name', 'ilike', "%{$request->get('search')}%")
+                ->whereBetween('sale', [$minPrice, $maxPrice])
+                ->Category($request)
+                ->paginate(9)->appends(request()->query());
+        }
 
-        $products = Product::where('active', true)
-            ->where('name', 'ilike', "%{$request->get('search')}%")
-            ->orWhereBetween('sale',  [$request->get('search') - 100000, $request->get('search') + 100000])
-            ->whereBetween('price', [$minPrice, $maxPrice])
-            ->Category($request)
-            ->paginate(9)->appends(request()->query());
 
         $productCount =  Product::where('active', true)->count();
         return view('public.product.index', [

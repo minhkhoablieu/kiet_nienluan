@@ -14,15 +14,15 @@ class Banner extends Model
         'url',
         'order'
     ];
-
+    protected $casts = [
+        'active' => 'boolean',
+    ];
     public function getStatusAttribute()
     {
-        if($this->active)
-        {
+        if ($this->active) {
             return "<span class='badge bg-success'>Kích hoạt</span>";
-        }else{
+        } else {
             return "<span class='badge bg-danger'>Không kích hoạt</span>";
-
         }
     }
 }

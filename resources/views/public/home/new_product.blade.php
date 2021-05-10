@@ -1,7 +1,7 @@
 <div class="max-w-screen-xl	mx-auto">
      <section id="product" class="my-8">
         <p class="text-center uppercase text-xl my-4">Sản phẩm mới</p>
-        <div class="grid grid-cols-4 gap-4">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
             @foreach ($products as $product)
             <a href="{{route('product.show', $product->slug)}}">
                 <div class="hover:shadow-lg">
