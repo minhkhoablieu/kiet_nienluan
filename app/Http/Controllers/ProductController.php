@@ -14,27 +14,28 @@ class ProductController extends Controller
     {
         $minPrice = 0;
         $maxPrice = 100000000;
+        
+        $products = Product::where('active', true);
+
         if ($request->get('price') != null) {
             $price = explode("-", $request->get('price'));
             $minPrice = $price[0];
             $maxPrice = $price[1];
-        }
-        if (is_numeric($request->get('search'))) {
-            $products = Product::where('active', true)
-                // ->where('name', 'ilike', "%{$request->get('search')}%")
-                ->whereBetween('sale',  [$request->get('search') - 100000, $request->get('search') + 100000])
-                ->whereBetween('sale', [$minPrice, $maxPrice])
-                ->Category($request)
-                ->paginate(9)->appends(request()->query());
-        } else {
-            $products = Product::where('active', true)
-                ->where('name', 'ilike', "%{$request->get('search')}%")
-                ->whereBetween('sale', [$minPrice, $maxPrice])
-                ->Category($request)
-                ->paginate(9)->appends(request()->query());
-        }
 
-
+            $products = $products->whereBetween('sale', [$minPrice, $maxPrice]);
+        }
+        if($request->get('search') != null)
+        {
+            if(is_numeric($request->get('search')))
+            {
+                $products = $products->whereBetween('sale', [$request->get('search')-100000, $request->get('search')+100000]);
+            }
+            else
+            {
+                $products = $products->where('name', 'like', "%{$request->get('search')}%");
+            }
+        }
+        $products = $products->Category($request)->paginate(9)->appends(request()->query());
         $productCount =  Product::where('active', true)->count();
         return view('public.product.index', [
             'products' => $products,

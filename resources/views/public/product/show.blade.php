@@ -116,6 +116,8 @@
                     '',
                     'success'
                 )
+                location.reload();
+
 
             })
 

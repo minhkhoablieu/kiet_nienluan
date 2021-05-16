@@ -29,11 +29,17 @@
             </div>
           </div>
           <div>
-              <div class="p-4 hover:bg-gray-700 hover:text-white">
-                  <a href="/gio-hang">
-                    <i class="fas fa-shopping-cart"></i>
+              <div class="p-2 relative">
+                <div class="border-2 border-gray-400 h-10 w-10 rounded-full ">
+                  <div  class="flex justify-center mt-1">
+                    <a href="/gio-hang">
+                      <i class="fas fa-shopping-cart"></i>
                     </a>
-
+                  </div>
+                </div>
+                  <div class="absolute top-0 right-0">
+                  {{Cart::getTotalQuantity()}}
+                  </div>
               </div>
 
           </div>
