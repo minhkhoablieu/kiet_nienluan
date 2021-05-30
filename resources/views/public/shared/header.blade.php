@@ -37,7 +37,7 @@
                     </a>
                   </div>
                 </div>
-                  <div class="absolute top-0 right-0">
+                  <div class="absolute top-0 right-0 cart_count">
                   {{Cart::getTotalQuantity()}}
                   </div>
               </div>
